@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://unpkg.com/vue@3/dist/vue.global.js"></script>
+
+  <title>Calculadora con Vue</title>
+  <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+<h1>Hola, este es el proyecto de calculadora usando Vue</h1>
+<div id="appCalculadora">
+  <div id="resultado">
+        <p>{{resultadoPantalla}}</p>
+  </div>
+
+  <div class="botones">
+    <button class="operadores" @click="botonPresionado('C')">C</button> 
+    <button class="operadores" @click="botonPresionado('%')">%</button> 
+    <button class="operadores" @click="botonPresionado('←')">←</button> 
+    <button class="operadores" @click="botonPresionado('/')">/</button>
+
+
+    <button @click="botonPresionado('7')">7</button>
+    <button @click="botonPresionado('8')">8</button>
+    <button @click="botonPresionado('9')">9</button>
+    <button class="operadores" @click="botonPresionado('x')">x</button>
+  
+    <button @click="botonPresionado('4')">4</button>
+    <button @click="botonPresionado('5')">5</button>
+    <button @click="botonPresionado('6')">6</button>
+    <button class="operadores" @click="botonPresionado('-')">-</button>
+  
+    <button @click="botonPresionado('1')">1</button>
+    <button @click="botonPresionado('2')">2</button>
+    <button @click="botonPresionado('3')">3</button>
+    <button class="operadores" @click="botonPresionado('+')">+</button>
+
+    <button @click="botonPresionado('0')">0</button>
+    <button @click="botonPresionado('.')">.</button>
+
+    <button id="botonIgual" @click="botonPresionado('=')">=</button>
+  
+  </div>
+</div>
+
+
+
+
+  
+  <script src="scriptCalculadora.js"></script>
+</body>
+</html>
